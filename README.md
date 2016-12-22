@@ -135,8 +135,8 @@ xml | Text in `xml` format
 
 Code | Transformation
 -----|------------
-foreign | transforms to `integer` with simple `index` and `constraint`. Must contain dataset of `constraint`
-increments | transforms to `integer` with `autoincrements` and `primary` index.
+foreign | transforms to `unsigned` `integer` with simple `index` and `constraint`. Must contain dataset of `constraint`
+increments | transforms to `unsigned` `integer` with `autoincrements` and `primary` index.
 
 
 -------------
