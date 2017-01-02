@@ -60,6 +60,7 @@ modified | Date when the specification was modified | No
 ### Table specification
 Value | Description | Requeried
 ------|-------------|----------
+code | Unique name of table | Yes | string
 columns | Specification of columns | Yes
 indexes | Specification of database indeces | No
 constraints | Specification of constraints for saving values | No
@@ -70,7 +71,8 @@ comment | A comment of table to save in database | No
 
 Value | Description | Requeried | Default
 ------|-------------|-----------|---------
-type | Specification of columns | Yes | string
+code | Unique name of column | Yes | string
+type | Type of column | Yes | string
 length | Maximal length of characters | No | 255
 precision | Size of numerics | No | 10
 scale | a scale of a numeric | No | 2
