@@ -24,9 +24,9 @@ You can find full documentation and real projects on www.gitdata.net. Please use
 
 Value | Description | Requeried
 ------|-------------|----------
-code | An unique code of GitData project | Yes
-name | A your of then project | Yes
-dataset | A name of dataset | Yes
+id | Unique code of GitData project | Yes
+project | Name of your project | Yes
+dataset | Name of dataset | Yes
 description | Full information of your project | No
 keywords | Keywords characterize your data | No
 license | Licence for publicated data and functionals | Yes
@@ -39,7 +39,7 @@ modified | Date when the specification was modified | No
 
 > For example:
 ```
- 'code' => 'gitdata',
+ 'id' => 'gitdata',
  'name' => 'The GitData project',
  'description' => 'Some project of GitData including many datasets',
  'dataset' => 'Some dataset',
@@ -60,18 +60,20 @@ modified | Date when the specification was modified | No
 ### Table specification
 Value | Description | Requeried
 ------|-------------|----------
-code | Unique name of table | Yes | string
+id | Unique name of table | Yes | string
 columns | Specification of columns | Yes
 indexes | Specification of database indeces | No
 constraints | Specification of constraints for saving values | No
-comment | A comment of table to save in database | No
+comment | Comment of table to save in database | No
+records | Preloading records in the specification | No
+values | Preloading values as array of `code` and `value` | No
 
 #### Columns specification
 > Each records has unique key same as the column name in the table.
 
 Value | Description | Requeried | Default
 ------|-------------|-----------|---------
-code | Unique name of column | Yes | string
+id | Unique name of column | Yes | string
 type | Type of column | Yes | string
 length | Maximal length of characters | No | 255
 precision | Size of numerics | No | 10
