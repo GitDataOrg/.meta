@@ -60,32 +60,30 @@ modified | Date when the specification was modified | No
 ### Table specification
 Value | Description | Requeried
 ------|-------------|----------
-id | Unique name of table | Yes | string
 columns | Specification of columns | Yes
 indexes | Specification of database indeces | No
 constraints | Specification of constraints for saving values | No
-comment | Comment of table to save in database | No
 records | Preloading records in the specification | No
 values | Preloading values as array of `code` and `value` | No
+comment | Comment of table to save in database | No
 
 #### Columns specification
 > Each records has unique key same as the column name in the table.
 
 Value | Description | Requeried | Default
 ------|-------------|-----------|---------
-id | Unique name of column | Yes | string
 type | Type of column | Yes | string
 length | Maximal length of characters | No | 255
 precision | Size of numerics | No | 10
 scale | a scale of a numeric | No | 2
-unsigned | Set unsigned numeric value | No | false
 increments | Set autoincrement value | No | false
+unsigned | Set unsigned numeric value | No | false
 nullable | Show null values are avaliable | No | true
 default | A default value in cafe not set | No | 
-comment | A comment for the column in database | No | 
 primary | Set a primary index for table | No | false
 index | Used if columns should be personal indexed | No | false
 unique | Used for unique indexing, `index` no needed | No | false
+comment | A comment for the column in database | No | 
 
 #### Indexes specification
 > Each records has unique key same as the index's name in the database, or can be absent.
@@ -93,7 +91,7 @@ unique | Used for unique indexing, `index` no needed | No | false
 Value | Description | Requeried
 ------|-------------|----------
 type | A type of index (`index` or `primary`) | Yes
-column | Name of a column or set of indexing columns | Yes
+columns | Name of a column or set of indexing columns | Yes
 direction | A direction od indexing (`asc` or `desc`) | No
 
 #### Constraints specification
@@ -102,7 +100,7 @@ direction | A direction od indexing (`asc` or `desc`) | No
 Value | Description | Requeried
 ------|-------------|----------
 type | A type of constraint (`unique`, `foreign` or `check`) | Yes
-column | A dependent refer column or set of a group of columns | Yes
+columns | A dependent refer column or set of a group of columns | Yes
 table | Parent table wich contains records | No
 references | A column or a group of columns of parent table wich contains records | No
 
